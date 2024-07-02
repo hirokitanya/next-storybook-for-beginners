@@ -9,9 +9,7 @@ export default function Dashboard({
   console.log(chart, deposit, order);
   return (
     <div>
-      <div>
-        {/* chart  */} {/* deposits */}
-      </div>
+      <div>{/* chart  */} テスト</div>
       <div>{/* recent orders */}</div>
     </div>
   );
