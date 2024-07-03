@@ -7,14 +7,14 @@ const meta = {
   title: 'dashboard/Deposit',
   component: Component,
   args: {
-    data: { amount: 3024.0, date: 'on 15 March, 2019' },
+    data: { amount: 3024.55, date: 'on 15 March, 2019' },
   },
   parameters: {
     Layout: 'centered',
   },
   decorators: [
     (Story) => (
-      <div className="w-[500px]">
+      <div className="w-[275px]">
         <Story />
       </div>
     ),
