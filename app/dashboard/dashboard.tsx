@@ -1,4 +1,5 @@
 import { ChartData, DepositData, OrderData } from './types';
+import Order from './order';
 
 export default function Dashboard({
   chart,
@@ -12,7 +13,9 @@ export default function Dashboard({
       <div>
         {/* chart  */} {/* deposits */}
       </div>
-      <div>{/* recent orders */}</div>
+      <div>
+        <Order data={order.data} />
+      </div>
     </div>
   );
 }
