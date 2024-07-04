@@ -7,6 +7,7 @@ import './chart.css';
 import { ChartData } from './types';
 
 export default function Chart({ data }: Readonly<ChartData>) {
+  console.log(data);
   return (
     <Paper className="flex h-48 p-2">
       {/* Title */}

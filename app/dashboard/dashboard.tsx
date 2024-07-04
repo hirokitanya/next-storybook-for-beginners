@@ -1,7 +1,6 @@
 import { ChartData, DepositData, OrderData } from './types';
 import Deposit from './deposit';
 import Chart from './chart';
-import './dashboard.css';
 export default function Dashboard({
   chart,
   deposit,
@@ -12,7 +11,7 @@ export default function Dashboard({
   return (
     <div>
       <div className="flex">
-        <span className="">
+        <span className="w-[900px]">
           {/* chart  */}
           <Chart data={chart.data} />
         </span>
