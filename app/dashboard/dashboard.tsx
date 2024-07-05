@@ -7,6 +7,7 @@ export default function Dashboard({
   order,
 }: Readonly<{ chart: ChartData; deposit: DepositData; order: OrderData }>) {
   // propsとして渡す
+  console.log(chart, deposit, order);
   return (
     <div>
       <div className="flex">
