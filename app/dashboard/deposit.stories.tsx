@@ -7,7 +7,7 @@ const meta = {
   title: 'dashboard/Deposit',
   component: Component,
   args: {
-    data: { amount: 3024.55, date: 'on 15 March, 2019' },
+    data: { amount: 3024.55, date: '2019-03-15' },
   },
   parameters: {
     Layout: 'centered',
