@@ -38,7 +38,7 @@ export default function Order({ data }: Readonly<OrderData>) {
                 <TableCell align="left">{row.name}</TableCell>
                 <TableCell align="left">{row.shipTo}</TableCell>
                 <TableCell align="left">{row.paymentMethod}</TableCell>
-                <TableCell align="right">${row.amount}</TableCell>
+                <TableCell align="right">${changeAmount(row.amount)}</TableCell>
               </TableRow>
             ))}
           </TableBody>
@@ -51,4 +51,9 @@ export default function Order({ data }: Readonly<OrderData>) {
 function changedate(olddate: string) {
   let date = olddate.split(' ');
   return date[2] + ' ' + date[1] + ',' + date[3];
+}
+
+function changeAmount(amount: number) {
+  let newAmount = amount.toFixed(2).split('.');
+  return newAmount[0] + '.' + newAmount[1];
 }

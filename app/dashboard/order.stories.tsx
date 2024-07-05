@@ -8,7 +8,7 @@ const meta = {
     data: [
       {
         id: 1,
-        date: '16 Mar, 2019',
+        date: 'Fri Mar 05 2019',
         name: 'Elvis Presley',
         shipTo: 'Tupelo, MS',
         paymentMethod: 'VISA ⠀•••• 3719',
@@ -16,7 +16,7 @@ const meta = {
       },
       {
         id: 2,
-        date: '16 Mar, 2019',
+        date: 'Fri Mar 16 2019',
         name: 'Paul McCartney',
         shipTo: 'London, UK',
         paymentMethod: 'VISA ⠀•••• 2574',
@@ -24,7 +24,7 @@ const meta = {
       },
       {
         id: 3,
-        date: '16 Mar, 2019',
+        date: 'Fri Mar 16 2019',
         name: 'Tom Scholz',
         shipTo: 'Boston, MA',
         paymentMethod: 'MC ⠀•••• 1253',
@@ -32,7 +32,7 @@ const meta = {
       },
       {
         id: 4,
-        date: '16 Mar, 2019',
+        date: 'Fri Mar 16 2019',
         name: 'Michael Jackson',
         shipTo: 'Gary, IN',
         paymentMethod: 'AMEX ⠀•••• 2000',
@@ -40,7 +40,7 @@ const meta = {
       },
       {
         id: 5,
-        date: '15 Mar, 2019',
+        date: 'Fri Mar 15 2019',
         name: 'Bruce Springsteen',
         shipTo: 'Long Branch, NJ',
         paymentMethod: 'VISA ⠀•••• 5919',
