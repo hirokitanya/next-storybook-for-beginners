@@ -11,7 +11,7 @@ import Link from 'next/link';
 import { DepositData } from './types';
 export default function Deposit({ data }: Readonly<DepositData>) {
   return (
-    <Card className="relative mx-5 h-48 min-h-48 min-w-64 p-2">
+    <Card className="relative h-48 min-h-48 min-w-48">
       <CardContent>
         <Typography component="h2" color="primary" gutterBottom className="font-bold">
           Resent Deposit
