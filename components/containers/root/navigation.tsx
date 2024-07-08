@@ -1,9 +1,6 @@
 'use client';
 
-import { Dashboard, People } from '@mui/icons-material';
-import BarChartIcon from '@mui/icons-material/BarChart';
-import LayersIcon from '@mui/icons-material/Layers';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { BarChart, Dashboard, Layers, People, ShoppingCart } from '@mui/icons-material';
 import { List } from '@mui/material';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -23,7 +20,7 @@ export default function Navigation() {
       </ListItemButton>
       <ListItemButton component={NextLink} href="/" selected={pathname === '/'}>
         <ListItemIcon>
-          <ShoppingCartIcon />
+          <ShoppingCart />
         </ListItemIcon>
         <ListItemText primary="Orders" />
       </ListItemButton>
@@ -35,13 +32,13 @@ export default function Navigation() {
       </ListItemButton>
       <ListItemButton component={NextLink} href="/" selected={pathname === '/'}>
         <ListItemIcon>
-          <BarChartIcon />
+          <BarChart />
         </ListItemIcon>
         <ListItemText primary="Reports" />
       </ListItemButton>
       <ListItemButton component={NextLink} href="/" selected={pathname === '/'}>
         <ListItemIcon>
-          <LayersIcon />
+          <Layers />
         </ListItemIcon>
         <ListItemText primary="Integreation" />
       </ListItemButton>
