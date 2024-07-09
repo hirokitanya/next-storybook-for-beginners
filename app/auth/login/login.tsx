@@ -26,7 +26,7 @@ export default function Login({ onSubmit }: { onSubmit: typeof loginAction }) {
         <Container component="main" maxWidth="xs">
           <Box className="mt-16 flex flex-col items-center">
             <div className="absolute top-1/4">
-              <Typography component="h1" variant="h5" color="primary" className="font-black">
+              <Typography component="h1" variant="h5" color="primary" className="text-center font-black">
                 業務管理システム
               </Typography>
               <Box component="form" action={action} {...getFormProps(form)} className="mt-2">
