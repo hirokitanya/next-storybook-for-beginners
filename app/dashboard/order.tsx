@@ -1,16 +1,15 @@
 import { Typography } from '@mui/material';
-import { OrderData } from './types';
-
-import * as React from 'react';
+import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
-
 import Link from 'next/link';
+import * as React from 'react';
+
+import { OrderData } from './types';
 
 export default function Order({ data }: Readonly<OrderData>) {
   return (
@@ -49,11 +48,11 @@ export default function Order({ data }: Readonly<OrderData>) {
   );
 }
 function changedate(olddate: string) {
-  let date = olddate.split(' ');
+  const date = olddate.split(' ');
   return date[2] + ' ' + date[1] + ',' + date[3];
 }
 
 function changeAmount(amount: number) {
-  let newAmount = amount.toFixed(2).split('.');
+  const newAmount = amount.toFixed(2).split('.');
   return newAmount[0] + '.' + newAmount[1];
 }
