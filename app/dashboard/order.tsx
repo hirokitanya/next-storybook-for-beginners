@@ -14,7 +14,7 @@ import { OrderData } from './types';
 export default function Order({ data }: Readonly<OrderData>) {
   return (
     <TableContainer component={Paper}>
-      <div className="h-lvh">
+      <div className="p-4">
         <Typography component="h2" variant="h6" color="primary" gutterBottom>
           Recent Orders
         </Typography>
