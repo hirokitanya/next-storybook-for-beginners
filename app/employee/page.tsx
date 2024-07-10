@@ -1,12 +1,12 @@
-import Dashboard from './dashboard';
+import Employee from './employee';
 
 export default async function Page() {
   const employee = await getEmployeeData();
-  return <Dashboard employee={employee} />;
+  return <Employee data={employee.data} />;
 }
 
 /**
- * 売上情報の取得
+ * 従業員情報の取得
  */
 async function getEmployeeData() {
   return await Promise.resolve({

@@ -93,12 +93,6 @@ export default function Employee({ data }: Readonly<EmployeeData>) {
                           <Avatar className="ring-3 h-6 w-6 bg-red-500 outline outline-1 outline-offset-4 outline-gray-200">
                             {row.name.charAt(0)}
                           </Avatar>
-                          {/* width: Fixed (50px)px;
-                          height: Hug (40px)px;
-                          padding: 8px 0px 0px 0px;
-                          gap: 0px;
-                          opacity: 0px; */}
-
                           <p className="my-0 ml-3">{row.name}</p>
                         </div>
                       </TableCell>
@@ -120,8 +114,4 @@ export default function Employee({ data }: Readonly<EmployeeData>) {
       </Box>
     </div>
   );
-  // function createChar(name: string) {
-  //   const firstChar = name.split('');
-  //   return firstChar[0];
-  // }
 }

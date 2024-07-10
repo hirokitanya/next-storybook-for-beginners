@@ -72,4 +72,4 @@ const meta = {
 } satisfies Meta<typeof Component>;
 export default meta;
 
-export const Order: StoryObj<typeof meta> = {};
+export const Employee: StoryObj<typeof meta> = {};
