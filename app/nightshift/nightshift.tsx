@@ -17,7 +17,7 @@ export default function NightShift({ props, date }: Readonly<{ props: NightShift
         夜勤勤務集計
       </Typography>
       <Typography className="align-center mb-3 flex h-11 w-[1200px] items-center rounded bg-blue-100 pl-8">
-        集計期間 : {formatandCompare(date.data[1].date, date.data[0].date)}
+        集計期間 : {date.data.startdate} ~ {date.data.enddate}
       </Typography>
 
       <TableContainer component={Paper} className="px-5 py-3">
@@ -48,39 +48,4 @@ export default function NightShift({ props, date }: Readonly<{ props: NightShift
       </TableContainer>
     </div>
   );
-}
-function formatandCompare(date1: string, date2: string) {
-  const newdate1 = new Date(date1);
-  const newdate2 = new Date(date2);
-  const format1 = date1.split('/');
-  const format2 = date2.split('/');
-  if (newdate1 > newdate2) {
-    return (
-      format2[0] +
-      ' / ' +
-      format2[1].padStart(2, '0') +
-      ' / ' +
-      format2[2].padStart(2, '0') +
-      ' ~ ' +
-      format1[0] +
-      ' / ' +
-      format1[1].padStart(2, '0') +
-      ' / ' +
-      format1[2].padStart(2, '0')
-    );
-  } else {
-    return (
-      format1[0] +
-      ' / ' +
-      format1[1].padStart(2, '0') +
-      ' / ' +
-      format1[2].padStart(2, '0') +
-      ' ~ ' +
-      format2[0].padStart(2, '0') +
-      ' / ' +
-      format2[1].padStart(2, '0') +
-      ' / ' +
-      format2[2].padStart(2, '0')
-    );
-  }
 }

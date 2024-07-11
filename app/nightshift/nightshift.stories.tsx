@@ -47,7 +47,7 @@ const meta = {
       ],
     },
     date: {
-      data: [{ date: '2022/01/01' }, { date: '2022/02/10' }],
+      data: { startdate: '2022/01/01'.replace(/\//, ' / '), enddate: '2022/01/31'.replace(/\//, ' / ') },
     },
   },
   parameters: {

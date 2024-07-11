@@ -16,14 +16,14 @@ async function getNightShiftData() {
 
 async function getDate() {
   return await Promise.resolve({
-    data: [
-      {
-        date: new Date().toLocaleDateString(),
-      },
-      {
-        date: getPastDate().toLocaleDateString(),
-      },
-    ],
+    data: {
+      startdate: getPastDate()
+        .toLocaleDateString('ja-JP', { year: 'numeric', month: '2-digit', day: '2-digit' })
+        .replace(/\//, ' / '),
+      enddate: new Date()
+        .toLocaleDateString('ja-JP', { year: 'numeric', month: '2-digit', day: '2-digit' })
+        .replace(/\//, ' / '),
+    },
   });
 }
 
