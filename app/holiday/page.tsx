@@ -10,6 +10,6 @@ export default async function Page() {
 }
 
 async function getPublicHoliday() {
-  const month = Math.floor(Math.random() * 12) + 1;
+  const month = new Date().getMonth() + 1;
   return await api<ComponentProps<typeof Board>['holiday']>('setting/holiday?month=' + month);
 }
