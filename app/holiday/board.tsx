@@ -1,5 +1,4 @@
-import { Box, Button, FormControl, MenuItem } from '@mui/material';
-import Select from '@mui/material/Select';
+import { Box, Button, FormControl, MenuItem, Select } from '@mui/material';
 import * as React from 'react';
 
 import Holiday from './holiday';
@@ -15,7 +14,11 @@ export default function Board({ holiday }: Readonly<{ holiday: HolidayData }>) {
       newPublicHoliday.data.push(holiday.data[i]);
     }
   }
-  const serectdata = ['2024', '2025', '2026', '2027', '2028', '2029', '2030'];
+  const nowyear = new Date().getFullYear();
+  const yearlist = [];
+  for (let i = 0; i < 4; i++) {
+    yearlist.push(nowyear + i);
+  }
   return (
     <div>
       <h2 className="text-center text-sky-800">カレンダー休日設定</h2>
@@ -23,8 +26,8 @@ export default function Board({ holiday }: Readonly<{ holiday: HolidayData }>) {
         <Box className="">
           <FormControl className="">
             <Select className="w-[100px]" size="small">
-              {serectdata.map((data) => (
-                <MenuItem key={data} value={data}>
+              {yearlist.map((data) => (
+                <MenuItem key={data} value={data.toString()}>
                   {data}年
                 </MenuItem>
               ))}
