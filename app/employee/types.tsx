@@ -1,3 +1,22 @@
 export interface EmployeeData {
-  data: { name: string; email: string; telNumber: string }[];
+  data: {
+    id: string;
+    name: string;
+    email: string;
+    phone: string;
+    initial: string;
+    hiredDate: string;
+    color: string;
+    isCalendarVisible: true;
+    role: string;
+  }[];
+}
+
+export interface PartnerData {
+  data: {
+    id: string;
+    name: string;
+    initial: string;
+    phone: string;
+  }[];
 }
