@@ -1,24 +1,21 @@
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import FormControl from '@mui/material/FormControl';
-import MenuItem from '@mui/material/MenuItem';
+import { Box, Button, FormControl, MenuItem } from '@mui/material';
 import Select from '@mui/material/Select';
 import * as React from 'react';
 
 import Holiday from './holiday';
-import PublicHoliday from './publicholiday';
 import { HolidayData } from './types';
 
 export default function Board({ holiday }: Readonly<{ holiday: HolidayData }>) {
-  const a: HolidayData = { data: [] };
-  const b: HolidayData = { data: [] };
+  const newHoliday: HolidayData = { data: [] };
+  const newPublicHoliday: HolidayData = { data: [] };
   for (let i = 0; i < holiday.data.length; i++) {
     if (holiday.data[i].isNationalHoliday) {
-      a.data.push(holiday.data[i]);
+      newHoliday.data.push(holiday.data[i]);
     } else {
-      b.data.push(holiday.data[i]);
+      newPublicHoliday.data.push(holiday.data[i]);
     }
   }
+  const serectdata = ['2024', '2025', '2026', '2027', '2028', '2029', '2030'];
   return (
     <div>
       <h2 className="text-center text-sky-800">カレンダー休日設定</h2>
@@ -26,9 +23,11 @@ export default function Board({ holiday }: Readonly<{ holiday: HolidayData }>) {
         <Box className="">
           <FormControl className="">
             <Select className="w-[100px]" size="small">
-              <MenuItem value={10}>2024年</MenuItem>
-              <MenuItem value={20}>2025年</MenuItem>
-              <MenuItem value={30}>2026年</MenuItem>
+              {serectdata.map((data) => (
+                <MenuItem key={data} value={data}>
+                  {data}年
+                </MenuItem>
+              ))}
             </Select>
           </FormControl>
         </Box>
@@ -42,11 +41,11 @@ export default function Board({ holiday }: Readonly<{ holiday: HolidayData }>) {
       <div className="mt-8">
         <div className="mb-5">
           {/* publicholiday  */}
-          <PublicHoliday holiday={b} />
+          <Holiday holiday={newPublicHoliday} />
         </div>
         <div>
           {/* holiday  */}
-          <Holiday holiday={a} />
+          <Holiday holiday={newHoliday} />
         </div>
       </div>
     </div>

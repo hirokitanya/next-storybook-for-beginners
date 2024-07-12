@@ -6,3 +6,8 @@ export interface HolidayData {
     isNationalHoliday: boolean;
   }[];
 }
+
+export interface HolidayType {
+  holiday: string;
+  publicholiday: string;
+}

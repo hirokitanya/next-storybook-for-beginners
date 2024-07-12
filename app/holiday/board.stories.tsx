@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
 
-import Component from './holiday';
+import Component from './board';
 
 const meta = {
-  title: 'holiday/Publicholiday',
+  title: 'holiday/board',
   component: Component,
   args: {
     holiday: {
@@ -12,7 +12,7 @@ const meta = {
           id: '497f6eca-6276-4993-bfeb-53cbbbba6f08',
           date: '2019-08-24',
           name: 'string',
-          isNationalHoliday: false,
+          isNationalHoliday: true,
         },
         {
           id: '497f6eca-6276-4993-bfeb-53cbbbba6f08',
@@ -24,7 +24,7 @@ const meta = {
           id: '497f6eca-6276-4993-bfeb-53cbbbba6f08',
           date: '2019-08-24',
           name: 'string',
-          isNationalHoliday: false,
+          isNationalHoliday: true,
         },
         {
           id: '497f6eca-6276-4993-bfeb-53cbbbba6f08',
@@ -36,7 +36,7 @@ const meta = {
           id: '497f6eca-6276-4993-bfeb-53cbbbba6f08',
           date: '2019-08-24',
           name: 'string',
-          isNationalHoliday: false,
+          isNationalHoliday: true,
         },
         {
           id: '497f6eca-6276-4993-bfeb-53cbbbba6f08',
@@ -48,7 +48,7 @@ const meta = {
           id: '497f6eca-6276-4993-bfeb-53cbbbba6f08',
           date: '2019-08-24',
           name: 'string',
-          isNationalHoliday: false,
+          isNationalHoliday: true,
         },
         {
           id: '497f6eca-6276-4993-bfeb-53cbbbba6f08',
@@ -73,4 +73,4 @@ const meta = {
 } satisfies Meta<typeof Component>;
 export default meta;
 
-export const Publicholiday: StoryObj<typeof meta> = {};
+export const Board: StoryObj<typeof meta> = {};

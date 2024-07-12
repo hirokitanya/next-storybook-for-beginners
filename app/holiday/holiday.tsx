@@ -1,21 +1,29 @@
-import { Typography } from '@mui/material';
-import Button from '@mui/material/Button';
-import Paper from '@mui/material/Paper';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
+import {
+  Button,
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Typography,
+} from '@mui/material';
 import * as React from 'react';
 
 import { HolidayData } from './types';
 
 export default function Holiday({ holiday }: Readonly<{ holiday: HolidayData }>) {
+  let horidaytype;
+  if (holiday.data[0].isNationalHoliday) {
+    horidaytype = '祝日';
+  } else {
+    horidaytype = '公休';
+  }
   return (
     <div className="grid w-full grid-cols-4">
       <Typography component="h2" variant="h6" gutterBottom className="font-bold">
-        祝日
+        {horidaytype}
       </Typography>
       <TableContainer component={Paper} className="col-span-3 px-5 py-3">
         <div className="p-4">
