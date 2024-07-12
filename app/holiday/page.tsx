@@ -10,5 +10,6 @@ export default async function Page() {
 }
 
 async function getPublicHoliday() {
-  return await api<ComponentProps<typeof Board>['holiday']>('setting/holiday?month=3');
+  const month = Math.floor(Math.random() * 12) + 1;
+  return await api<ComponentProps<typeof Board>['holiday']>('setting/holiday?month=' + month);
 }
