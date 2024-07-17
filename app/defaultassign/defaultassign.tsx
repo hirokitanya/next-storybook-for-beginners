@@ -10,21 +10,16 @@ export default function DefaultAssign({
 }: Readonly<{ defaultassign: DefaultAssignData; weekday: DayOfWeekDatas }>) {
   return (
     <div className="min-w-full items-center">
-      <h2 className="text-center font-bold text-sky-800">デフォルトデザイン設定</h2>
+      <h2 className="text-center font-bold text-sky-800">デフォルトアサイン設定</h2>
       <Card className="min-w-[1200] p-10">
         <CardContent>
           <div className="grid grid-cols-3">
             <div className="col-span-2">
               <h3 className="font-bold text-sky-800">休日/平日設定</h3>
               <div className="flex flex-wrap">
-                <Box day={weekday.data[0]} defaultassign={defaultassign} />
-                <Box day={weekday.data[1]} defaultassign={defaultassign} />
-                <Box day={weekday.data[2]} defaultassign={defaultassign} />
-                <Box day={weekday.data[3]} defaultassign={defaultassign} />
-                <Box day={weekday.data[4]} defaultassign={defaultassign} />
-                <Box day={weekday.data[5]} defaultassign={defaultassign} />
-                <Box day={weekday.data[6]} defaultassign={defaultassign} />
-                <Box day={weekday.data[7]} defaultassign={defaultassign} />
+                {weekday.data.map((day) => (
+                  <Box key={day.dayofweek} day={day} defaultassign={defaultassign} />
+                ))}
               </div>
               <Typography>曜日をクリックすると平日と休日を切り替えることができます。</Typography>
               <Typography>休日として設定された曜日はデフォルトで休に配置されます。</Typography>
